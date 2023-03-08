@@ -70,7 +70,7 @@ void TWI_MasterInit(uint32_t frequency)
   {
 
 // Disable pins hardwired to the default i2c pins (PA2 and PA3)
-#if defined(NANO_EVERY_PINOUT)
+#if defined(NANOCOREX_DEFAULT_NANOX_PINOUT)
     PORTF_PIN2CTRL &= ~PORT_PULLUPEN_bm; // Disable PF2 pullup
     PORTF_PIN3CTRL &= ~PORT_PULLUPEN_bm; // Disable PF3 pullup
     PORTF_DIRCLR = PIN2_bm | PIN3_bm;   // Set PF2 and PF3 as inputs
@@ -114,7 +114,7 @@ void TWI_SlaveInit(uint8_t address, uint8_t receive_broadcast, uint8_t second_ad
     return;
 
   // Disable pins hardwired to the default i2c pins (PA2 and PA3)
-#if defined(NANO_EVERY_PINOUT)
+#if defined(NANOCOREX_DEFAULT_NANOX_PINOUT)
   if ((PORTMUX.TWISPIROUTEA & 0x30) == TWI_MUX)
   {
     PORTF_PIN2CTRL &= ~PORT_PULLUPEN_bm; // Disable PF2 pullup
