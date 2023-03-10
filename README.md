@@ -197,7 +197,7 @@ The default timer can be changed by adding `-DMILLIS_USE_TIMERBx` to the platfor
 
 ## Pinout
 This core provides just the NanoX Arduino pin mapping, design specifically to match 1-to-1 pin mapping of the Arduino Nano development board. If you want to work with a different platform we encourage you to check out [MegaCoreX](https://github.com/MCUdude/MegaCoreX) by [MCUdude](https://github.com/MCUdude)
-- **NanoX pin standard**: This pinout is 1-to-1 compatible with Arduino Nano pinout. The only pin swap done by default is the PWM output pins & the I2C port. This however causes "collisions" between the ADC peripheral and the I2C peripheral. Activating the I2C peripheral will set the PF3 & PF4 pins to high impedance state, after this trying to read from this pins will cause wrong behavior on I2C, be aware of this limitation.
+- **NanoX pin standard**: This pinout is 1-to-1 compatible with Arduino Nano pinout. The only pin swap done by default is the PWM output pins & the i2c port. This however causes "collisions" between the ADC peripheral and the i2c peripheral. Activating the i2c peripheral will set the PF3 & PF4 pins to high impedance state, after this trying to read from this pins will cause wrong behavior on i2c, be aware of this limitation.
 
 Please have a look at the pins_arduino.h files for detailed info.<br/> <br/>
 >>TODO: Insert board pinout

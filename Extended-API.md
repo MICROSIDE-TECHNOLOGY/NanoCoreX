@@ -1,9 +1,6 @@
 # Extended Arduino API
 
-MegaCoreX is Arduino compatible out of the box, but also includes extra functionality that's not available on the official Arduino "megaavr" core. This is functionality that I personally have been missing in the official Arduino API, and have added to MegaCoreX instead.
-
-My goal isn't to "Arduino wrap" all hardware functionality the megaAVR-0 series brings to the table, but to expose functionality advanced users may benefit from and actually use. If you have a very niche application that utilizes one of the more obscure features the chip has, you're probably better off writing the low-level code yourself. Very spesific needs for ADC readings? Obscure timer needs? Read the approperiate Microchip application note w!
-
+NanoCoreX is Arduino Nano compatible out of the box, but also includes extra functionality that's not available on the official Arduino "megaavr" core.
 
 ## Table of contents
 * [Analog read resolution](#analog-read-resolution)
@@ -23,7 +20,7 @@ analogReadResolution(10); // Set resolution to 10 bits
 
 
 ## Fast IO
-For timing critical applications the standard `digitalRead()` and `digitalWrite()` functions may be too slow. To solve this, MegaCoreX also includes some improved variants that compiles down to a single instruction.
+For timing critical applications the standard `digitalRead()` and `digitalWrite()` functions may be too slow. To solve this, NanoCoreX also includes some improved variants that compiles down to a single instruction.
 Call `digitalReadFast(myPin)` or `digitalWriteFast(mypin, state)` to use these.<br/>
 **Note that the pin number and pin state has to be known at compile time!**
 
@@ -135,7 +132,7 @@ The following parameters ca be used to set the pinConfigure modes:
 
 
 ## Printf support
-Unlike the official Arduino core, MegaCoreX has printf support out of the box. If you're not familiar with printf you should probably [read this first](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It's added to the Print class and will work with all libraries that inherit Print. Printf is a standard C function that lets you format text much easier than using Arduino's built-in print and println. 
+Unlike the official Arduino core, NanoCoreX has printf support out of the box. If you're not familiar with printf you should probably [read this first](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It's added to the Print class and will work with all libraries that inherit Print. Printf is a standard C function that lets you format text much easier than using Arduino's built-in print and println. 
 
 Note that the default printf implementation will NOT print floats or doubles by default. This is a limitation of the avr-libc printf implementation on AVR microcontrollers, but can be enabled by setting a build flag. This can easily be done if you're using [PlatformIO](https://github.com/MCUdude/MegaCoreX/blob/master/PlatformIO.md).
 
