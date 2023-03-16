@@ -6,11 +6,11 @@ menu.resetpin=Reset pin
 menu.bootloader=Bootloader
 
 ########################
-#### Microside NanoX ####
+#### Microside NANO-X ####
 ########################
 
 # General
-msidenanox.name=Microside NanoX
+msidenanox.name=Microside NANO-X
 msidenanox.upload.tool=avrdude
 msidenanox.upload.maximum_data_size=6144
 msidenanox.upload.speed=115200
@@ -28,7 +28,7 @@ msidenanox.bootloader.APPEND=0x00
 msidenanox.bootloader.LOCKBIT=0xC5
 
 # Pinouts
-msidenanox.menu.pinout.nanox_microside=Microside NanoX
+msidenanox.menu.pinout.nanox_microside=Microside NANO-X
 msidenanox.menu.pinout.nanox_microside.build.variant=nanox
 
 # EEPROM
