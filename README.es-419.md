@@ -40,7 +40,7 @@ They're small programmers with excellent software support, and can be used with 
   - [Pines de interrupción](#pines-de-interrupción)
   - [Salidas PWM](#salidas-pwm)
   - [Lógica personalizada configurable (CCL)](#lógica-personalizada-configurable-ccl)
-[Comparador analógico (AC)](#comparador-analógico-ac)
+  - [Comparador analógico (AC)](#comparador-analógico-ac)
   - [Eventos de sistema (EVSYS)](#eventos-de-sistema-evsys)
   - [Cambio de los pines de los periféricos](#cambio-de-los-pines-de-los-periféricos)
 * [Guía de instalación](#guía-de-instalación)
@@ -223,18 +223,18 @@ Consideré que la función tone() utiliza TCB1, así que las salidas PWM corresp
 ### Lógica personalizada configurable (CCL)
 Los microcontroladores megaAVR-0 están equipados con cuatro bloques independientes de lógica configurable, que pueden utilizarse para mejorar la velocidad y desempeño. Los pines CCL están marcados en el diagrama pinout. Los bloques lógicos pueden utilizarse de manera independiente unos de otros, conectarse juntos o generar interrupciones a la CPU. MCUdude desarrolló una  [librería ligera, y de alto nivel](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX/tree/master/megaavr/libraries/Logic) para el uso del hardware CCL.
 
->Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte en [repositorio de NanoCoreX](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork.
+>Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte en el [repositorio de NanoCoreX](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork.
 
 ### Comparador analógico (AC)
 Los microcontroladores megaAVR-0 están equipados con un comparador analógico de hardware. Compara valores de voltaje de dos entradas y genera una salida digital basada en esta comparación. El chip megaAVR tiene cuatro pines AC positivos y tres pines AC negativos. También integra un generador de voltaje de referencia interno que puede utilizarse en lugar de una referencia externa.
 revise [la librería Comparator](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX/tree/master/megaavr/libraries/Comparator) para más información y ejemplos.
 
->Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte [NanoCoreX repository](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork.
+>Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte en el [repositorio de NanoCoreX](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork
 
 ### Eventos de sistema (EVSYS)
 Los eventos de sistema (EVSYS) permite señalización directa periférico a periférico. Permite que el cambio en un periférico (el generador de evento) dispare una acción en otros periféricos (el usuario de evento) a través de canales de eventos, sin utilizar la CPU. Está diseñada para proveer respuestas predecibles en cortos intervalos de tiempo entre periféricos, permitiendo control e interacción autónoma entre estos. Es una poderosa herramienta para reducir la complejidad, tamaño y tiempo de ejecución del software. Revise la [librería Event](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX/tree/master/megaavr/libraries/Event), allí encontrará documentación y ejemplos de uso.
 
->Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte [NanoCoreX repository](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork.
+>Nota: Si encuentra problemas al usar esta librería junto al núcleo NanoCoreX, por favor realice el reporte en el [repositorio de NanoCoreX](https://github.com/MICROSIDE-TECHNOLOGY/NanoCoreX) primero, ya que puede tratarse de un error especifico de este fork
 
 ### Cambio de los pines de los periféricos
 El microcontrolador megaAVR-0 permite asignar pines alternativos en sus periféricos de hardware.<br/>
@@ -248,7 +248,7 @@ NanoCoreX actualmente soporta el intercambio de pines en los periféricos SPI, i
 * Despliegue la opción **Archivo > Preferencias** del menú.
 * Ingrese la siguiente URL en **Gestor de URLs Adicionales de Tarjetas**:
     ```
-    TODO: url
+    https://microside-technology.github.io/arduino-dev-boards/package_MICROSIDE_dev_boards_index.json
     ```
 * Separe las URLs utilizando comas ( **,** ) si tiene más de una URL
 * Selecciona la opción **Herramientas > Placa > Gestor de tarjetas...** del menú.

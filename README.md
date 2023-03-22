@@ -260,7 +260,7 @@ NanoCoreX currently supports pinswapping the SPI, i2c and UART peripheral pins.
 * Open the **File > Preferences** menu item.
 * Enter the following URL in **Additional Boards Manager URLs**:
     ```
-    TODO: url
+    https://microside-technology.github.io/arduino-dev-boards/package_MICROSIDE_dev_boards_index.json
     ```
 * Separate the URLs using a comma ( **,** ) if you have more than one URL
 * Open the **Tools > Board > Boards Manager...** menu item.
